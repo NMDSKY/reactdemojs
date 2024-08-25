@@ -1,5 +1,7 @@
 # 简介
 基于react+js的学习项目
+![QQ20240825-123046](https://github.com/user-attachments/assets/d9f1cdc2-a9e8-4a8e-b9c7-3e04c13bf03d)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
