@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import IndexF from './IndexF';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 //documet.getElementById(‘root’)是获取public文件夹下的index.html文件中id为root的节点
@@ -33,7 +34,33 @@ class Index extends React.Component{
         return <h1>count:{this.state.count}</h1>
     }
 }
+// 类的有参构造函数props，实现props+state结合修改state
+//state的作用其实就是定义变量，就相当于java中的类的私有变量，在本类中提供给其他方法使用的，也就是在类中是共享的。
+class IndexSP extends React.Component{
+    //构造器
+    constructor(props) {
+        super(props);
+        this.state = {count: 0};
+        //绑定事件，一般来说onClick都需要有bind
+        this.add = this.add.bind(this);
+        this.inc = this.inc.bind(this);
+    }
+    add(){
+        this.setState({count:this.state.count+1});
+    }
 
+    inc(){
+        this.setState({count:this.state.count-1});
+    }
+
+    render() {
+        return <>
+            <button onClick={this.add}>点击+1</button>
+            <button onClick={this.inc}>点击-1</button>
+            <h1>count:{this.state.count}</h1>
+        </>
+    }
+}
 
 root.render(
   <React.StrictMode>
@@ -45,6 +72,8 @@ root.render(
       <Age age='24'/>
       <Sex temp= '男'/>
       <Index></Index>
+      <IndexSP></IndexSP>
+      <IndexF></IndexF>
   </React.StrictMode>
 );
 
