@@ -12,6 +12,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 function Hello() {
     return <h1>Hello World!</h1>;
 }
+function Name() {
+    return <h1>姓名：sirwsl</h1>;
+}
+function Age(){
+    return <h1>年龄：24</h1>
+}
+function Sex(){
+    return <h1>性别：男</h1>
+}
 
 root.render(
   <React.StrictMode>
@@ -19,6 +28,9 @@ root.render(
       {/*加入element后下列hello失效*/}
       {/*    <h1>hello world</h1>,*/}
       <Hello></Hello>
+      <Age></Age>
+      <Sex></Sex>
+      <Name></Name>
   </React.StrictMode>
 );
 
