@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import IndexF from './IndexF';
+import WebSite from './WebSite';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 //documet.getElementById(‘root’)是获取public文件夹下的index.html文件中id为root的节点
@@ -74,6 +75,7 @@ root.render(
       <Index></Index>
       <IndexSP></IndexSP>
       <IndexF></IndexF>
+      <WebSite></WebSite>
   </React.StrictMode>
 );
 
