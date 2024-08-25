@@ -7,6 +7,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+      {/*每个插件的目的都是写虚拟dom,操作请求后数据渲染到虚拟dom最后来到这里进行最终加工成真实dom*/}
       <h1>hello world</h1>,
   </React.StrictMode>
 );
