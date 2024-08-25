@@ -6,13 +6,19 @@ import './index.css';
 //documet.getElementById(‘root’)是获取public文件夹下的index.html文件中id为root的节点
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // ReactDOM.render是用来渲染的, 它将对应的元素插入到相应的节点中。
-const element = <h1 >this is a demo=>fuck you</h1>;
+// 变量表示dom
+// const element = <h1 >this is a demo=>fuck you</h1>;
+// 函数表示dom,可以封装到文件再引入进来
+function Hello() {
+    return <h1>Hello World!</h1>;
+}
+
 root.render(
-    element,
   <React.StrictMode>
       {/*每个插件的目的都是写虚拟dom,操作请求后数据渲染到虚拟dom最后来到这里进行最终加工成真实dom*/}
       {/*加入element后下列hello失效*/}
-          <h1>hello world</h1>,
+      {/*    <h1>hello world</h1>,*/}
+      <Hello></Hello>
   </React.StrictMode>
 );
 
