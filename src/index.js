@@ -21,6 +21,19 @@ function Age(props){
 function Sex(props){
     return <h1>性别：{props.temp}</h1>
 }
+// 使用类的方式构建dom,constructor是构造器，初始化的数据一般都在这，render()是将这个类中所有要渲染的东西都放在这里渲染、返回
+class Index extends React.Component{
+    //构造器
+    constructor() {
+        super();
+        this.state = {count : 2};//state表示这个组件的状态，他可以在初始化时保存一些值，其他时间修改会触发渲染机制
+    }
+
+    render() {
+        return <h1>count:{this.state.count}</h1>
+    }
+}
+
 
 root.render(
   <React.StrictMode>
@@ -31,6 +44,7 @@ root.render(
       <Name name='sirwsl'/>
       <Age age='24'/>
       <Sex temp= '男'/>
+      <Index></Index>
   </React.StrictMode>
 );
 
